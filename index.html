@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imóveis Luxor — Imóveis de Luxo | CRECI/ES 12.242-J</title>
+  <meta name="description" content="Imóveis na Grande Vitória e região. Apartamentos, Salas Comerciais, Terrenos e Casas. Luxor Empreendimentos Imobiliários - CRECI/ES 12.242-J.">
+  <meta property="og:title" content="Imóveis Luxor">
+  <meta property="og:description" content="Imóveis na Grande Vitória e região. Apartamentos, Salas Comerciais, Terrenos e Casas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/home.webp">
+  <link rel="shortcut icon" href="assets/img/favicon.png">
+
+  <!-- Google Fonts originais do site: Barlow Semi Condensed & Questrial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,300;0,500;0,600;1,300;1,500&family=Questrial&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 4.7 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Folha de Estilo Oficial Imóveis Luxor -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO PRINCIPAL -->
+  <header id="cabecalho">
+    <!-- Barra Superior (.top) -->
+    <div class="top">
+      <div class="container top-inner">
+        <div class="top-left">
+          <span class="creci-badge">
+            <strong>CRECI/ES 12.242-J</strong> - Vitória / <abbr title="Espírito Santo">ES</abbr>
+          </span>
+
+          <a href="https://api.whatsapp.com/send?phone=5527996968825&text=Vi%20seu%20n%C3%BAmero%20no%20site%20http%3A%2F%2Fwww.imoveisluxor.com.br." target="_blank" rel="noopener" class="top-link" title="Enviar mensagem via WhatsApp">
+            <i class="fa fa-phone"></i>
+            <span>(27) 9.9696-8825</span>
+          </a>
+
+          <a href="javascript:void(0)" onclick="toggleWhatsAppChat()" class="top-link whats-top" title="Fale com a gente no WhatsApp">
+            <i class="fa fa-whatsapp"></i>
+            <span>Atendimento via WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="top-right">
+          <!-- Dropdown Encontre Rápido -->
+          <div class="dropdown-buscas">
+            <button type="button" class="btn-findfast">
+              <span>encontre rápido</span>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-ccd">
+              <li><a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'venda', tipos:['apartamento']})">Apartamentos</a></li>
+              <li><a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'venda', tipos:['terreno','terreno-condominio']})">Terrenos</a></li>
+              <li class="divider"></li>
+              <li><a href="javascript:void(0)" onclick="applyQuickFilter({estagio:'lancamento'})">Lançamentos</a></li>
+              <li><a href="javascript:void(0)" onclick="applyQuickFilter({estagio:'em-construcao'})">Em Construção</a></li>
+              <li><a href="javascript:void(0)" onclick="applyQuickFilter({estagio:'pronto'})">Pronto para Morar</a></li>
+              <li class="divider"></li>
+              <li><a href="javascript:void(0)" onclick="applyQuickFilter({caracs:['frente-mar']})">Frente para o Mar</a></li>
+              <li><a href="javascript:void(0)" onclick="applyQuickFilter({caracs:['frente-mar']})">Quadra do Mar</a></li>
+              <li class="divider"></li>
+              <li><a href="#mapadosite"><i class="fa fa-list"></i> Mapa de Imóveis</a></li>
+            </ul>
+          </div>
+
+          <!-- Imóveis Favoritos -->
+          <a href="javascript:void(0)" onclick="openFavoritesPage()" class="fav-top-link" title="Ver meus imóveis favoritos">
+            <i class="fa fa-star" style="color:var(--luxor-gold);"></i>
+            <span>imóveis favoritos</span>
+            <span class="badge fav-count-badge">0</span>
+          </a>
+
+          <!-- Redes Sociais -->
+          <div class="top-social">
+            <a href="https://www.instagram.com/imoveisluxorbr" target="_blank" rel="noopener" title="Instagram @imoveisluxorbr" aria-label="Instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@ImoveisLuxor" target="_blank" rel="noopener" title="YouTube Imóveis Luxor" aria-label="YouTube">
+              <i class="fa fa-youtube-play"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Área Central do Cabeçalho: Logo + Megamenu -->
+    <div class="middle-header">
+      <div class="container header-flex">
+        <a href="#home" class="logo-link" title="Imóveis Luxor: página inicial">
+          <img src="assets/img/logo4.png" alt="Imóveis Luxor CRECI/ES 12.242-J">
+        </a>
+
+        <nav class="main-nav">
+          <button type="button" class="btn-mobile-menu" onclick="document.getElementById('main-nav-list').classList.toggle('mobile-open')" aria-label="Menu">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <ul class="nav-list" id="main-nav-list">
+            <li class="nav-item active" id="nav-home">
+              <a href="#home" class="nav-link" title="Home"><i class="fa fa-home"></i> <span>Home</span></a>
+            </li>
+
+            <li class="nav-item" id="nav-imobiliaria">
+              <a href="#imobiliaria" class="nav-link">A Imobiliária</a>
+            </li>
+
+            <!-- Megamenu Vendas -->
+            <li class="nav-item has-dropdown" id="nav-vendas">
+              <a href="#vendas" class="nav-link">Vendas <i class="fa fa-angle-down"></i></a>
+              <div class="megamenu-panel">
+                <div class="megamenu-grid">
+                  <div class="megamenu-col">
+                    <h4><span>Imóveis à Venda</span> <span class="qt-badge">4</span></h4>
+                    <a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'venda', tipos:['apartamento']})">
+                      <span><i class="fa fa-chevron-right" style="color:var(--luxor-gold);"></i> Apartamentos</span>
+                      <span class="qt-badge">1</span>
+                    </a>
+                    <a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'venda', tipos:['terreno','terreno-condominio']})">
+                      <span><i class="fa fa-chevron-right" style="color:var(--luxor-gold);"></i> Terrenos</span>
+                      <span class="qt-badge">3</span>
+                    </a>
+                  </div>
+
+                  <div class="megamenu-col">
+                    <h4><span>Terrenos - todos</span> <span class="qt-badge">3</span></h4>
+                    <a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'venda', tipos:['terreno']})">
+                      <span><i class="fa fa-chevron-right" style="color:var(--luxor-gold);"></i> Terrenos</span>
+                      <span class="qt-badge">2</span>
+                    </a>
+                    <a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'venda', tipos:['terreno-condominio']})">
+                      <span><i class="fa fa-chevron-right" style="color:var(--luxor-gold);"></i> Terrenos em Condomínio</span>
+                      <span class="qt-badge">1</span>
+                    </a>
+                  </div>
+
+                  <div class="megamenu-col">
+                    <h4><span>Cidades & Destaques</span></h4>
+                    <a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'venda', cidade:'Vila Velha'})">
+                      <span><i class="fa fa-chevron-right" style="color:var(--luxor-gold);"></i> Vila Velha</span>
+                      <span class="qt-badge">2</span>
+                    </a>
+                    <a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'venda', cidade:'Camaçari'})">
+                      <span><i class="fa fa-chevron-right" style="color:var(--luxor-gold);"></i> Camaçari</span>
+                      <span class="qt-badge">1</span>
+                    </a>
+                    <a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'venda', cidade:'Vitória'})">
+                      <span><i class="fa fa-chevron-right" style="color:var(--luxor-gold);"></i> Vitória</span>
+                      <span class="qt-badge">1</span>
+                    </a>
+                    <a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'venda', estagio:'pronto'})">
+                      <span><i class="fa fa-chevron-right" style="color:var(--luxor-gold);"></i> Pronto para morar</span>
+                      <span class="qt-badge">3</span>
+                    </a>
+                    <a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'venda', caracs:['frente-mar']})">
+                      <span><i class="fa fa-chevron-right" style="color:var(--luxor-gold);"></i> Frente para o mar</span>
+                      <span class="qt-badge">2</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Megamenu Aluguel -->
+            <li class="nav-item has-dropdown" id="nav-aluguel">
+              <a href="#aluguel" class="nav-link">Aluguel <i class="fa fa-angle-down"></i></a>
+              <div class="megamenu-panel compact" style="min-width:280px;padding:18px;">
+                <div class="megamenu-col">
+                  <h4><span><i class="fa fa-calendar"></i> Aluguel Anual</span> <span class="qt-badge">1</span></h4>
+                  <a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'aluguel', tipos:['terreno']})">
+                    <span><i class="fa fa-chevron-right" style="color:var(--luxor-gold);"></i> Terrenos</span>
+                    <span class="qt-badge">1</span>
+                  </a>
+                  <a href="javascript:void(0)" onclick="applyQuickFilter({finalidade:'aluguel', caracs:['frente-mar']})">
+                    <span><i class="fa fa-chevron-right" style="color:var(--luxor-gold);"></i> Frente para o mar</span>
+                    <span class="qt-badge">1</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Dropdown Contato -->
+            <li class="nav-item has-dropdown" id="nav-contato">
+              <a href="#contato" class="nav-link">Contato <i class="fa fa-angle-down"></i></a>
+              <div class="megamenu-panel compact">
+                <ul class="compact-menu-list">
+                  <li><a href="#contato"><i class="fa fa-comments"></i> <span>Fale Conosco</span></a></li>
+                  <li><a href="javascript:void(0)" onclick="toggleWhatsAppChat()"><i class="fa fa-whatsapp"></i> <span>Contato via WhatsApp</span></a></li>
+                  <li><a href="#cadastre"><i class="fa fa-keyboard-o"></i> <span>Venda seu Imóvel</span></a></li>
+                  <li><a href="#trabalhe"><i class="fa fa-paperclip"></i> <span>Trabalhe Conosco</span></a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Dropdown Busca -->
+            <li class="nav-item has-dropdown">
+              <a href="#vendas" class="nav-link" title="Buscar Imóveis"><i class="fa fa-search"></i></a>
+              <div class="megamenu-panel search-panel">
+                <p style="font-size:13px;color:#555;">Busque imóveis por palavra-chave, referência (#005, #008, #009, #010), característica, cidade ou tipo:</p>
+                <form class="megamenu-search-form" onsubmit="event.preventDefault(); applyQuickFilter({busca: document.getElementById('menu_search_inp').value});">
+                  <input type="search" id="menu_search_inp" placeholder="busca imóveis…">
+                  <button type="submit" class="btn-tema"><i class="fa fa-search"></i></button>
+                </form>
+                <div style="margin-top:10px;text-align:right;">
+                  <a href="#vendas" style="font-size:13px;color:var(--luxor-gold);font-weight:600;"><i class="fa fa-sliders"></i> busca avançada</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL DINÂMICO -->
+  <main id="content" class="container" role="main">
+    <div id="app-content"></div>
+  </main>
+
+  <!-- RODAPÉ OFICIAL (#rodape) -->
+  <footer id="rodape">
+    <div class="footer_top">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h2>Imóveis Luxor</h2>
+            <ul class="footer-links">
+              <li>
+                <a href="javascript:void(0)" onclick="toggleWhatsAppChat()">
+                  <i class="fa fa-whatsapp"></i> (27) 9.9696-8825 (WhatsApp)
+                </a>
+              </li>
+              <li>
+                <a href="mailto:contato@imoveisluxor.com.br">
+                  <i class="fa fa-envelope-o"></i> contato@imoveisluxor.com.br
+                </a>
+              </li>
+              <li>
+                <a href="#trabalhe">
+                  <i class="fa fa-paperclip"></i> trabalhe conosco
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Veja Mais</h2>
+            <ul class="footer-links">
+              <li>
+                <a href="#home" onclick="setTimeout(()=>document.getElementById('news_nome')?.focus(),200)">
+                  <i class="fa fa-newspaper-o"></i> receba nosso newsletter
+                </a>
+              </li>
+              <li>
+                <a href="#cadastre">
+                  <i class="fa fa-dollar"></i> cadastre seu imóvel
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" onclick="openFavoritesPage()">
+                  <i class="fa fa-star"></i> imóveis favoritos (<span class="fav-count-badge">0</span>)
+                </a>
+              </li>
+              <li>
+                <a href="#mapadosite">
+                  <i class="fa fa-list"></i> mapa de imóveis
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Redes Sociais</h2>
+            <ul class="footer-links">
+              <li>
+                <a href="https://www.instagram.com/imoveisluxorbr/" target="_blank" rel="noopener">
+                  <i class="fa fa-instagram"></i> Instagram (@imoveisluxorbr)
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@ImoveisLuxor" target="_blank" rel="noopener">
+                  <i class="fa fa-youtube-play"></i> YouTube (@ImoveisLuxor)
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" onclick="toggleWhatsAppChat()">
+                  <i class="fa fa-whatsapp"></i> WhatsApp
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_bottom">
+      <div class="container footer-bottom-flex">
+        <p id="copyright">
+          <strong>&copy; 2023-2026</strong> Imóveis Luxor - <strong>CRECI/ES 12.242-J</strong> &mdash; Todos os direitos reservados.
+          &nbsp; <i class="fa fa-lock"></i> <a href="#privacidade">Política de Privacidade</a>
+        </p>
+        <p>
+          Corretor Responsável: <strong>Fernando Paiva Bezerra (CRECI 11880-F)</strong>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WIDGET WHATSAPP FLUTUANTE COM CHAT -->
+  <div class="whatsapp-floating">
+    <button type="button" class="whatsapp-fab" onclick="toggleWhatsAppChat()" title="Contato via WhatsApp" aria-label="Contato via WhatsApp">
+      <i class="fa fa-whatsapp"></i>
+    </button>
+
+    <section class="box-whatsapp" id="box-whatsapp-chat">
+      <header>
+        <span><i class="fa fa-whatsapp"></i> Imóveis Luxor</span>
+        <button type="button" onclick="toggleWhatsAppChat()" title="Fechar"><i class="fa fa-times"></i></button>
+      </header>
+      <div class="chat-body">
+        <div class="chat-bubble">
+          Olá! Bem-vindo à <strong>Imóveis Luxor</strong>.<br>Como podemos ajudar você hoje?
+        </div>
+        <form onsubmit="sendWhatsAppChatForm(event)">
+          <div class="form-group-luxor">
+            <div class="input-group-luxor">
+              <textarea id="wa_chat_msg" rows="2" required>Olá, gostaria de mais informações sobre os imóveis</textarea>
+            </div>
+          </div>
+          <div class="form-group-luxor">
+            <div class="input-group-luxor">
+              <input type="text" id="wa_chat_nome" required placeholder="Seu nome completo *">
+            </div>
+          </div>
+          <div class="form-group-luxor">
+            <div class="input-group-luxor">
+              <input type="tel" id="wa_chat_fone" required placeholder="Seu telefone / WhatsApp *">
+            </div>
+          </div>
+          <button type="submit" class="btn-mais-whats" style="margin:6px 0 0;">
+            <i class="fa fa-paper-plane"></i> Iniciar Conversa no WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- BANNER LGPD DE COOKIES -->
+  <div class="lgpd-banner" id="lgpd-banner">
+    <p>Utilizamos <em>cookies</em> para oferecer melhor experiência, melhorar o desempenho, analisar como você interage em nosso site e gravar informações coletadas por meio de formulários.</p>
+    <p>Ao utilizar esse site, você concorda com o uso de <em>cookies</em>. Para mais informações visite <a href="#privacidade">Política de Privacidade</a>.</p>
+    <div style="text-align:right;margin-top:8px;">
+      <button type="button" onclick="acceptLgpd()" class="btn-tema" style="background:var(--luxor-gold);color:#000 !important;">
+        <i class="fa fa-check"></i> aceito cookies
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL LIGHTBOX PARA AMPLIAR FOTOS -->
+  <div class="lightbox-modal" id="lightbox-modal" onclick="closeLightbox()">
+    <button type="button" class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="Foto ampliada">
+  </div>
+
+  <!-- Dados Estruturados Schema.org (idênticos ao site original) -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Imóveis Luxor",
+    "url": "https://www.imoveisluxor.com.br/",
+    "telephone": "(27) 9.9696-8825",
+    "email": "contato@imoveisluxor.com.br",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "6",
+      "worstRating": "1",
+      "bestRating": "5"
+    },
+    "sameAs": [
+      "https://www.instagram.com/imoveisluxorbr",
+      "https://www.youtube.com/@ImoveisLuxor"
+    ]
+  }
+  </script>
+
+  <!-- Scripts da Aplicação -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
